@@ -1,0 +1,39 @@
+$speed: 300ms;
+
+@function size($px) {
+  @return calc(#{$px} / 3840 * 200vw);
+}
+
+@function sizem($px) {
+  @return calc(#{$px} / 375 * 100vw);
+}
+
+@function sizeh($px) {
+  @return calc(#{$px} / 1080 * 100vh);
+}
+
+@function sizehm($px) {
+  @return calc(#{$px} / 690 * 100vh);
+}
+
+@mixin w {
+  @media (max-width: 3840px) and (min-width: 1001px) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@import "./app.scss";
+@import "./fonts.scss";
+
